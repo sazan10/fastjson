@@ -17,12 +17,7 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: 11
-    - name: Set up Maven
-      uses: actions/setup-java@v2
-      with:
-        distribution: 'temurin'
-        java-version: 11
-        maven-version: 3.6.3
+
     - name: Compile Java sources
       run: |
         mvn clean install -DskipTests
