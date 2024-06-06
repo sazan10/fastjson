@@ -6,7 +6,7 @@ on:
 jobs:
   run-jpf:
     runs-on: ubuntu-20.04
-    name: Java ${{ matrix.java }} Run Compilation
+    name: Run Compilation
 
     steps:
     - name: Checkout Code
@@ -16,6 +16,11 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: 1.8
+    - name: Set up Maven
+      uses: actions/setup-java@v2
+      with:
+        java-version: 1.8
+        maven-version: 2.0.31
     - name: Compile Java sources
       run: |
         mvn clean install -DskipTests
