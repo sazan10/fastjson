@@ -16,12 +16,12 @@ jobs:
       uses: actions/setup-java@v2
       with:
         distribution: 'temurin'
-        java-version: 8
+        java-version: 11
     - name: Set up Maven
       uses: actions/setup-java@v2
       with:
         distribution: 'temurin'
-        java-version: 8
+        java-version: 11
         maven-version: 2.0.31
     - name: Compile Java sources
       run: |
