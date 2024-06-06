@@ -22,7 +22,7 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: 11
-        maven-version: 2.0.31
+        maven-version: 3.6.3
     - name: Compile Java sources
       run: |
         mvn clean install -DskipTests
